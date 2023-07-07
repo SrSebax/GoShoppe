@@ -1,0 +1,52 @@
+.venta-card {
+    margin: 20px 40px 40px 40px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.btn-principal {
+    background-color: #1E81DB;
+    color: white;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.card button:hover {
+    background-color: #45a049;
+}

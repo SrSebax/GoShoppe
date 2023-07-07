@@ -1,0 +1,51 @@
+<mat-card class="dashboard-card">
+    <mat-card-content>
+      <mat-grid-list cols="3" rowHeight="100px">
+        <mat-grid-tile>
+          <mat-card class="card-info">
+            <mat-card-header>
+              <div mat-card-avatar>
+                <mat-icon class="ic-ingresos">payments</mat-icon>
+              </div>
+              <mat-card-title>Total Ingresos</mat-card-title>
+              <mat-card-subtitle>{{totalIngresos}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </mat-grid-tile>
+  
+        <mat-grid-tile>
+          <mat-card class="card-info">
+            <mat-card-header>
+              <div mat-card-avatar>
+                <mat-icon class="ic-ventas">sell</mat-icon>
+              </div>
+              <mat-card-title>Total Ventas</mat-card-title>
+              <mat-card-subtitle>{{totalVentas}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </mat-grid-tile>
+  
+        <mat-grid-tile>
+          <mat-card class="card-info">
+            <mat-card-header>
+              <div mat-card-avatar>
+                <mat-icon class="ic-productos">collections_bookmark</mat-icon>
+              </div>
+              <mat-card-title>Total Productos</mat-card-title>
+              <mat-card-subtitle>{{totalProductos}}</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+  
+      <mat-card class="chart-card">
+        <mat-card-content>
+          <div class="chart-container">
+            <canvas id="chartBarras"></canvas>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+    </mat-card-content>
+  </mat-card>
+  

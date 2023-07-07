@@ -1,0 +1,43 @@
+<mat-card class="producto-card">
+  <mat-card-title>
+    <button mat-raised-button color="primary" (click)="nuevoProducto()" class="btn-agg">
+      <mat-icon mat-list-icon>add</mat-icon>Nuevo Producto
+    </button>
+  </mat-card-title>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content class="dashboard-card-content">
+    <mat-form-field appearance="standard">
+      <mat-label>Buscar</mat-label>
+      <input matInput #input (input)="filtrarProductos(input.value.toLocaleLowerCase())">
+    </mat-form-field>
+
+    <div class="card-container">
+      <div class="card" *ngFor="let producto of productosFiltrados">
+        <div class="card-header">
+          <div class="image-container">
+            <img [src]="obtenerImagen(producto.descripcionCategoria)" [ngClass]="obtenerClaseEstado(producto.esActivo)"
+              alt="Imagen">
+          </div>
+          <h3 class="card-title">{{ producto.nombre }}</h3>
+        </div>
+
+        <div class="card-body">
+          <p><strong>Categoría:</strong> {{ producto.descripcionCategoria }}</p>
+          <p><strong>Stock:</strong> {{ producto.stock }}</p>
+          <p><strong>Precio:</strong> {{ producto.precio }}</p>
+          <p><strong>Estado:</strong> {{ producto.esActivo ? 'Activo' : 'No Activo' }}</p>
+        </div>
+        <div class="card-footer">
+          <button mat-icon-button color="primary" (click)="editarProducto(producto)" class="action-button">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="eliminarProducto(producto)" class="action-button">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

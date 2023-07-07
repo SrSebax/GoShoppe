@@ -1,0 +1,279 @@
+*,
+*::before,
+*::after {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+}
+
+.header-img {
+  background: url(../home/images/cross_top.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 558px;
+  height: 228px;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+
+.bottom-img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.navbar .logo img {
+  width: 100px;
+  margin: 0 10px 0 30px;
+}
+
+.navbar .logo a {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.navbar .btn {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.image-container {
+  width: 40%;
+  border-right: 2px solid #FFBD59;
+}
+
+.image-container img {
+  display: block;
+  width: 400px;
+  height: auto;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+  color: #418FD6;
+}
+
+.box {
+  position: relative;
+  width: 380px;
+  height: 400px;
+  background: #418FD6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::before {
+  background: linear-gradient(0deg, transparent, #FFBD59, #FFBD59);
+}
+
+.box::after {
+  background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  color: #418FD6;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-bottom: 50px;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #11AEEF;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  background-color: #418FD6;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFBD59;
+  opacity: 0;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  z-index: -1;
+}
+
+.button:hover:before {
+  opacity: 1;
+  transform: scale(2);
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}

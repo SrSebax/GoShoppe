@@ -1,0 +1,61 @@
+.mat-toolbar {
+    border-bottom: 2px solid rgb(255, 189, 89);
+    background-color: #1E81DB;
+    color: white;
+  }
+  
+  h1 {
+    font-family: 'Contrail One', cursive;
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .mat-sidenav {
+    border-right: 2px solid rgb(255, 189, 89);
+    background-color: white;
+  }
+  
+  .mat-sidenav-container {
+    background-color: #013e4918;
+  }
+
+  .mat-list-item.active {
+    background-color: rgba(255, 189, 89, 0.418);
+  }  
+  
+  .logo img {
+    width: 60px;
+    margin-right: 10px;
+    margin-left: 30px;
+  }
+  
+  .logo a {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .flex-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .user-label {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .profile-image {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .logout-button {
+    margin-bottom: 10px;
+  }
+  

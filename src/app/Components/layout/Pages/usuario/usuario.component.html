@@ -1,0 +1,40 @@
+<mat-card class="usuario-card">
+    <mat-card-title>
+        <button mat-raised-button color="primary" (click)="nuevoUsuario()" class="btn-agg">
+            <mat-icon mat-list-icon>add</mat-icon>&nbsp; Agregar Usuario
+        </button>
+    </mat-card-title>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-content class="dashboard-card-content">
+
+        <mat-form-field appearance="standard">
+            <mat-label>Buscar</mat-label>
+            <input matInput #input (input)="filtrarUsuarios(input.value.toLocaleLowerCase())">
+        </mat-form-field>
+
+        <div class="card-container">
+            <div class="card" *ngFor="let usuario of usuariosFiltrados">
+                <div class="card-header">
+                    <img [src]="obtenerImagen(usuario.rolDescripcion)" [ngClass]="obtenerClaseEstado(usuario.esActivo)"
+                        alt="Imagen" class="img-user">
+                    <h3>{{ usuario.nombreCompleto }}</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+                    <p><strong>Rol:</strong> {{ usuario.rolDescripcion }}</p>
+                    <p><strong>Estado:</strong> {{ usuario.esActivo ? 'Activo' : 'No Activo' }}</p>
+                </div>
+                <div class="card-footer">
+                    <button mat-icon-button color="primary" (click)="editarUsuario(usuario)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" (click)="eliminarUsuario(usuario)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

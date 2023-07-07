@@ -1,0 +1,118 @@
+* {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url(images/go-shoppe.png) center/cover;
+}
+
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.header-img {
+  background: url(images/cross_top.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 558px;
+  height: 228px;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.navbar .logo img {
+  width: 100px;
+  margin: 0 10px 0 30px;
+}
+
+.navbar .logo a {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-section {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 80vh;
+  z-index: 3;
+}
+
+.text-container {
+  position: absolute;
+  left: 15%;
+  top: 65%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: black;
+  z-index: 3;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #1E81DB;
+}
+
+.content-section p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 35px;
+  width: 160px;
+  border-radius: 25px;
+  background: #1E81DB;
+  color: #fff;
+  margin-left: 80px;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: jump 1s infinite;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); box-shadow: 0 0 0 rgba(0, 0, 0, 0.473); }
+  50% { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473); }
+  100% { transform: translateY(0); box-shadow: 0 0 0 rgba(0, 0, 0, 0.473); }
+}
+
+.btn:hover {
+  background: #FFBD59;
+  color: #000;
+}

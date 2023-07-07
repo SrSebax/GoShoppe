@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/42aa0889-60b0-4414-8a33-0cbb05985437/resourceGroups/GoShoppe/providers/Microsoft.Web/sites/goshoppe",
+    "appService.deploySubpath": "dist\\app-sistema-ventas"
+}

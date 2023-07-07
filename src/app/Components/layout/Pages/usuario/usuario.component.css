@@ -1,0 +1,59 @@
+.usuario-card {
+  margin: 20px 40px 40px 40px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  font-size: 14px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-agg {
+  width: 100%;
+  background-color: #ffbd59;
+  color: black;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header img {
+  width: 100px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.img-inactive {
+  filter: grayscale(100%);
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}

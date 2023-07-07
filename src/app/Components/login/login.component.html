@@ -1,0 +1,46 @@
+<div class="body">
+    <div class="header-img"></div>
+    <div class="bottom-img">
+        <img src="../../../assets/images/cross_top.png">
+    </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../../../assets/images/logo.png">
+            <a>Go Shoppe</a>
+        </div>
+        <button type="button" class="btn btn-light" (click)="goToHome()">
+            <i class="fa-solid fa-reply"></i>
+            &nbsp;
+            Regresar
+        </button>
+    </nav>
+    <div class="box">
+        <form [formGroup]="formularioLogin" (ngSubmit)="iniciarSesion()">
+            <h2>Iniciar Sesión</h2>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Correo</mat-label>
+                <input type="email" formControlName="email" matInput autocomplete="off" required>
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input [type]="ocultarPassword ? 'password' : 'text'" formControlName="password" matInput
+                    autocomplete="off" required>
+
+                <button mat-icon-button matSuffix (click)="ocultarPassword = !ocultarPassword" type="button">
+                    <mat-icon matSuffix>{{ocultarPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+
+            </mat-form-field>
+            <button class="button" type="submit" [disabled]="formularioLogin.invalid">
+                Ingresar
+                &nbsp;
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+        </form>
+    </div>
+    <div *ngIf="mostrarLoading" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div class="logo">
+        <img src="../../../assets/images/logo.png" alt="Logo">
+        <a>Go Shoppe</a>
+      </div>
+  
+      <span class="flex-spacer"></span>
+      <label class="user-label">
+        {{nombreUsuario}} - {{rolUsuario}} |
+        <img [src]="obtenerImagen(rolUsuario)" alt="perfil" class="profile-image">
+      </label>
+      <button mat-icon-button (click)="cerrarSesion()" class="logout-button">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <!-- La lista del menu es traido de los datos que hay en la base de datos -->
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;">
+      <mat-nav-list>
+        <mat-list-item *ngFor="let menu of listaMenus" [routerLink]="menu.url" [class.active]="esPaginaActiva(menu.url)">
+          <mat-icon mat-list-icon>{{menu.icono}}</mat-icon>
+          <div mat-line>{{menu.nombre}}</div>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <div style="height: 90vh;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
